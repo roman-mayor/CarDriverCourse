@@ -9,7 +9,7 @@ import java.util.Collection;
 
 public interface DriverCourseDao extends GenericDAO<DriverCourse, Long>{
 
-    DriverCourse getCourseByGroup(Group group);
+    DriverCourse getCourseById(Long id);
 
     Collection<DriverCourse> getByInstructor(User user);
 

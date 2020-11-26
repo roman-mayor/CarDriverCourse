@@ -12,5 +12,6 @@ public interface DriverCourseService {
     DriverCourse deleteCourse(DriverCourse course);
 
     Collection<DriverCourse> getCourseByType(CourseType type);
+
     DriverCourse getById(Long id);
 }

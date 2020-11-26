@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class User implements Identifired<Long> {
@@ -8,11 +9,14 @@ public class User implements Identifired<Long> {
     private String firstName;
     private String lastName;
     private String email;
-    private int age;
+    private Date birthday;
+
+
+
     private Role role;
 
     public Long getId() {
-        return null;
+        return id;
     }
 
     public void setId(Long id) {
@@ -44,14 +48,6 @@ public class User implements Identifired<Long> {
         this.email = email;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public Role getRole() {
         return role;
     }
@@ -60,12 +56,19 @@ public class User implements Identifired<Long> {
         this.role = role;
     }
 
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return age == user.age &&
+        return birthday == user.birthday &&
                 id.equals(user.id) &&
                 firstName.equals(user.firstName) &&
                 lastName.equals(user.lastName) &&
@@ -75,7 +78,7 @@ public class User implements Identifired<Long> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, email, age, role);
+        return Objects.hash(id, firstName, lastName, email, birthday, role);
     }
 
     @Override
@@ -85,7 +88,7 @@ public class User implements Identifired<Long> {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
-                ", age=" + age +
+                ", birthday=" + birthday +
                 ", role=" + role +
                 '}';
     }

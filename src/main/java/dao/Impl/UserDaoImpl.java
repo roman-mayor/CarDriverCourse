@@ -17,7 +17,6 @@ public class UserDaoImpl extends AbstactDAO<User, Long> implements UserDao {
 
     @Override
     public Collection<User> getAllByRole(Role role) {
-        List<User> users = elements.values().stream().filter(p -> p.getRole() == role).collect(Collectors.toList());
-        return users;
+        return elements.values().stream().filter(usr -> usr.getRole() == role).collect(Collectors.toList());
     }
 }
