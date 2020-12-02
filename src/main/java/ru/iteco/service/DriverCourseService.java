@@ -1,7 +1,7 @@
-package service;
+package ru.iteco.service;
 
-import model.CourseType;
-import model.DriverCourse;
+import ru.iteco.model.CourseType;
+import ru.iteco.model.DriverCourse;
 
 import java.util.Collection;
 

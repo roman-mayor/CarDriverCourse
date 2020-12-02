@@ -1,9 +1,8 @@
-package dao;
+package ru.iteco.dao;
 
-import model.CourseType;
-import model.DriverCourse;
-import model.Group;
-import model.User;
+import ru.iteco.model.CourseType;
+import ru.iteco.model.DriverCourse;
+import ru.iteco.model.User;
 
 import java.util.Collection;
 

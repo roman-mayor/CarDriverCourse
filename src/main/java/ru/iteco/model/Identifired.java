@@ -1,4 +1,4 @@
-package model;
+package ru.iteco.model;
 
 /**
  * Identifired определяет интерфейс для объектов с идентификаторами

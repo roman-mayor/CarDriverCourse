@@ -1,13 +1,17 @@
-package service.Impl;
+package ru.iteco.service.Impl;
 
-import dao.UserDao;
-import model.User;
-import service.UserService;
+import ru.iteco.dao.UserDao;
+import ru.iteco.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import ru.iteco.service.UserService;
 
+@Service
 public class UserServiceImpl implements UserService {
 
-    private UserDao userDao;
+    private final UserDao userDao;
 
+    @Autowired
     public UserServiceImpl(UserDao userDao){
         this.userDao = userDao;
     }
