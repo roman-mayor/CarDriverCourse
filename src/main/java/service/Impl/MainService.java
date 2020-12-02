@@ -21,7 +21,6 @@ public class MainService {
 
         User instructor = new User();
         instructor.setId(0L);
-        instructor.setAge(40);
         instructor.setEmail("gena@gmail.com");
         instructor.setFirstName("Виктор");
         instructor.setLastName("Комаров");
@@ -34,7 +33,6 @@ public class MainService {
 
         User student = new User();
         student.setId(0L);
-        student.setAge(20);
         student.setEmail("misha@gmail.com");
         student.setFirstName("Михаил");
         student.setLastName("Светлов");
@@ -43,7 +41,6 @@ public class MainService {
 
         User student2 = new User();
         student2.setId(1L);
-        student2.setAge(25);
         student2.setEmail("gena@gmail.com");
         student2.setFirstName("Геннадий");
         student2.setLastName("Жданов");

@@ -11,11 +11,20 @@ public class DriverCourse implements Identifired<Long>{
     private LocalDate endTime;
     private int groupCount;
     private List<Group> groups;
+    private User user;
 
 
     @Override
     public Long getId() {
         return id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setId(Long id) {
