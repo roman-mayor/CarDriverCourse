@@ -1,7 +1,7 @@
-package dao.Impl;
+package ru.iteco.dao.Impl;
 
-import dao.GenericDAO;
-import model.Identifired;
+import ru.iteco.dao.GenericDAO;
+import ru.iteco.model.Identifired;
 import java.util.Collection;
 import java.util.Map;
 

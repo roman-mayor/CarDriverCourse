@@ -1,15 +1,15 @@
-package dao.Impl;
+package ru.iteco.dao.Impl;
 
-import dao.GroupDao;
-import model.Group;
-import model.CourseType;
-import model.User;
+import org.springframework.stereotype.Repository;
+import ru.iteco.dao.GroupDao;
+import ru.iteco.model.Group;
+import ru.iteco.model.User;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.stream.Collectors;
 
+@Repository
 public class GroupDaoImpl extends AbstactDAO<Group, Long> implements GroupDao {
 
     public GroupDaoImpl() {

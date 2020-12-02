@@ -1,7 +1,6 @@
-package model;
+package ru.iteco.model;
 
 import java.util.Date;
-import java.util.Objects;
 
 public class User implements Identifired<Long> {
 
@@ -10,11 +9,12 @@ public class User implements Identifired<Long> {
     private String lastName;
     private String email;
     private Date birthday;
-
-
-
     private Role role;
 
+    public User(){
+    }
+
+    @Override
     public Long getId() {
         return id;
     }
@@ -22,7 +22,6 @@ public class User implements Identifired<Long> {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -48,14 +47,6 @@ public class User implements Identifired<Long> {
         this.email = email;
     }
 
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
     public Date getBirthday() {
         return birthday;
     }
@@ -63,22 +54,13 @@ public class User implements Identifired<Long> {
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return birthday == user.birthday &&
-                id.equals(user.id) &&
-                firstName.equals(user.firstName) &&
-                lastName.equals(user.lastName) &&
-                email.equals(user.email) &&
-                role == user.role;
+
+    public Role getRole() {
+        return role;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstName, lastName, email, birthday, role);
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     @Override

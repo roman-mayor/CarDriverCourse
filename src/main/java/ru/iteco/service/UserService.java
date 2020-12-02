@@ -1,6 +1,6 @@
-package service;
+package ru.iteco.service;
 
-import model.User;
+import ru.iteco.model.User;
 
 public interface UserService {
 
