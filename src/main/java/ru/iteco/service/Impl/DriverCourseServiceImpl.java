@@ -1,10 +1,9 @@
 package ru.iteco.service.Impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import ru.iteco.dao.DriverCourseDao;
 import ru.iteco.model.CourseType;
 import ru.iteco.model.DriverCourse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.iteco.service.DriverCourseService;
 
@@ -15,6 +14,7 @@ public class DriverCourseServiceImpl implements DriverCourseService {
 
     private final DriverCourseDao driverCourseDao;
 
+    @Autowired
     public DriverCourseServiceImpl(DriverCourseDao driverCourseDao){
         this.driverCourseDao = driverCourseDao;
     }
