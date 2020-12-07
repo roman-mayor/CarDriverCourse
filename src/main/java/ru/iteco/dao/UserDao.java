@@ -1,7 +1,7 @@
-package dao;
+package ru.iteco.dao;
 
-import model.Role;
-import model.User;
+import ru.iteco.model.Role;
+import ru.iteco.model.User;
 
 import java.util.Collection;
 

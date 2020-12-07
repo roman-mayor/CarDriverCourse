@@ -1,4 +1,4 @@
-package model;
+package ru.iteco.model;
 
 import java.time.LocalDate;
 import java.util.List;

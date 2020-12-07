@@ -1,8 +1,7 @@
-package dao;
+package ru.iteco.dao;
 
-import model.Group;
-import model.CourseType;
-import model.User;
+import ru.iteco.model.Group;
+import ru.iteco.model.User;
 
 import java.util.Collection;
 

@@ -1,23 +1,26 @@
-package service.Impl;
+package ru.iteco.service.Impl;
 
-import model.*;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+import ru.iteco.config.SpringConfig;
+import ru.iteco.model.*;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import service.DriverCourseService;
-import service.GroupService;
-import service.UserService;
+import ru.iteco.service.DriverCourseService;
+import ru.iteco.service.GroupService;
+import ru.iteco.service.UserService;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+@Component
 public class MainService {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
-        UserService userService = (UserService) context.getBean("userService");
-        GroupService groupService = (GroupService) context.getBean("groupService");
-        DriverCourseService driverCourseService = (DriverCourseService) context.getBean("driverCourseService");
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        UserService userService = (UserService) context.getBean("userServiceImpl");
+        GroupService groupService = (GroupService) context.getBean("groupServiceImpl");
+        DriverCourseService driverCourseService = (DriverCourseService) context.getBean("driverCourseServiceImpl");
 
         User instructor = new User();
         instructor.setId(0L);

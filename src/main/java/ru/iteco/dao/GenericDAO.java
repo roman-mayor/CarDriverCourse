@@ -1,6 +1,6 @@
-package dao;
+package ru.iteco.dao;
 
-import model.Identifired;
+import ru.iteco.model.Identifired;
 import java.util.Collection;
 
 /**

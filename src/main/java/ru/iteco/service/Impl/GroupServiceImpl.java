@@ -1,16 +1,19 @@
-package service.Impl;
+package ru.iteco.service.Impl;
 
-import dao.GroupDao;
-import model.Group;
-import service.GroupService;
+import org.springframework.stereotype.Service;
+import ru.iteco.dao.GroupDao;
+import ru.iteco.model.Group;
+import ru.iteco.service.GroupService;
 
+@Service
 public class GroupServiceImpl implements GroupService {
 
-    GroupDao groupDao;
+    private final GroupDao groupDao;
 
     public GroupServiceImpl(GroupDao groupDao){
         this.groupDao = groupDao;
     }
+
     @Override
     public void addGroup(Group group) {
         groupDao.create(group);

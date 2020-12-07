@@ -1,6 +1,6 @@
-package service;
+package ru.iteco.service;
 
-import model.Group;
+import ru.iteco.model.Group;
 
 public interface GroupService {
 

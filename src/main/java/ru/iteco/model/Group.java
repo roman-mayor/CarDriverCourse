@@ -1,4 +1,4 @@
-package model;
+package ru.iteco.model;
 
 import java.util.Set;
 
