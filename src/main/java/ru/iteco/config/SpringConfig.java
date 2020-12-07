@@ -18,19 +18,4 @@ import ru.iteco.service.UserService;
 @ComponentScan("ru.iteco")
 @PropertySource("classpath:application.properties")
 public class SpringConfig {
-
-    @Bean
-    public UserService userServiceImpl(UserDao userDao){
-        return new UserServiceImpl(userDao);
-    }
-
-    @Bean
-    public GroupService groupServiceImpl(GroupDao groupDao){
-        return new GroupServiceImpl(groupDao);
-    }
-
-    @Bean
-    public DriverCourseService driverCourseServiceImpl(DriverCourseDao driverCourseDao){
-        return new DriverCourseServiceImpl(driverCourseDao);
-    }
 }

@@ -1,9 +1,8 @@
 package ru.iteco.service.Impl;
 
+import org.springframework.stereotype.Service;
 import ru.iteco.dao.GroupDao;
 import ru.iteco.model.Group;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import ru.iteco.service.GroupService;
 
 @Service
@@ -11,7 +10,6 @@ public class GroupServiceImpl implements GroupService {
 
     private final GroupDao groupDao;
 
-    @Autowired
     public GroupServiceImpl(GroupDao groupDao){
         this.groupDao = groupDao;
     }
